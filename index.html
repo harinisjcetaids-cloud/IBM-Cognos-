@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpicePot Analytics – IBM Cognos Case Study</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg-pattern"></div>
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-spice">SpicePot</span>
+        <span class="logo-analytics">Analytics</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#dataset">Dataset</a></li>
+        <li><a href="#questions">Case Studies</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#team">IBM Cognos</a></li>
+      </ul>
+      <div class="nav-badge">Case Study 13</div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-tag">IBM Cognos Analytics · AdroIT Technologies</div>
+      <h1 class="hero-title">SpicePot<br/><span>Restaurant Chain</span></h1>
+      <p class="hero-subtitle">Sales & Customer Analytics across 25 outlets in South India</p>
+      <div class="hero-modules">
+        <span class="module-chip">Reporting</span>
+        <span class="module-chip">Exploration</span>
+        <span class="module-chip">Dashboard</span>
+        <span class="module-chip">Story Making</span>
+      </div>
+      <a href="#overview" class="cta-btn">Explore Case Study ↓</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card"><span class="stat-num">25</span><span class="stat-label">Outlets</span></div>
+      <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Order Types</span></div>
+      <div class="stat-card"><span class="stat-num">6</span><span class="stat-label">Case Questions</span></div>
+      <div class="stat-card"><span class="stat-num">4</span><span class="stat-label">Cognos Modules</span></div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="section overview-section">
+    <div class="container">
+      <div class="section-label">Real-Time Business Scenario</div>
+      <h2 class="section-title">The Business Problem</h2>
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p>SpicePot is a <strong>multi-cuisine restaurant chain</strong> with 25 outlets across South India offering dine-in, takeaway, and home delivery.</p>
+          <p>The operations head has observed that <span class="highlight">weekend peak hours</span> are causing long waiting times, certain menu items are consistently underperforming, and delivery orders are increasing customer complaints due to <span class="highlight">cold food and long delivery times</span>.</p>
+          <p>IBM Cognos Analytics is being used to analyze sales, menu performance, and service quality.</p>
+        </div>
+        <div class="overview-cards">
+          <div class="problem-card">
+            <div class="problem-icon">⏱️</div>
+            <div class="problem-text">
+              <strong>Long Wait Times</strong>
+              <p>Weekend peak hours causing customer dissatisfaction</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">📉</div>
+            <div class="problem-text">
+              <strong>Underperforming Menu Items</strong>
+              <p>Items consistently not meeting revenue targets</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">🚚</div>
+            <div class="problem-text">
+              <strong>Delivery Complaints</strong>
+              <p>Cold food and long delivery times impacting ratings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATASET -->
+  <section id="dataset" class="section dataset-section">
+    <div class="container">
+      <div class="section-label">Data Architecture</div>
+      <h2 class="section-title">Dataset / Data Available</h2>
+      <div class="dataset-grid">
+        <div class="dataset-group">
+          <div class="dataset-group-title">📦 Order Information</div>
+          <ul>
+            <li><span class="field">Order ID</span></li>
+            <li><span class="field">Outlet Name</span></li>
+            <li><span class="field">Outlet City</span></li>
+            <li><span class="field">Order Type</span> <span class="tag">Dine-In / Takeaway / Delivery</span></li>
+            <li><span class="field">Order Date</span></li>
+            <li><span class="field">Day of Week</span></li>
+          </ul>
+        </div>
+        <div class="dataset-group">
+          <div class="dataset-group-title">🍽️ Menu Details</div>
+          <ul>
+            <li><span class="field">Menu Item</span></li>
+            <li><span class="field">Category</span> <span class="tag">Starters / Mains / Desserts / Beverages</span></li>
+            <li><span class="field">Quantity Ordered</span></li>
+            <li><span class="field">Item Price</span></li>
+            <li><span class="field">Total Bill</span></li>
+          </ul>
+        </div>
+        <div class="dataset-group">
+          <div class="dataset-group-title">⏰ Time & Service</div>
+          <ul>
+            <li><span class="field">Order Time (mins)</span></li>
+            <li><span class="field">Preparation Time (mins)</span></li>
+            <li><span class="field">Delivery Time (mins)</span></li>
+            <li><span class="field">Order Status</span> <span class="tag">Completed / Cancelled</span></li>
+          </ul>
+        </div>
+        <div class="dataset-group">
+          <div class="dataset-group-title">👤 Customer Data</div>
+          <ul>
+            <li><span class="field">Customer ID</span></li>
+            <li><span class="field">Customer Rating</span> <span class="tag">1–5</span></li>
+            <li><span class="field">Feedback Tag</span> <span class="tag">Food Quality / Service / Delivery / Ambience</span></li>
+            <li><span class="field">Waiter Name</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY QUESTIONS -->
+  <section id="questions" class="section questions-section">
+    <div class="container">
+      <div class="section-label">Case Study Questions</div>
+      <h2 class="section-title">Six Analytical Challenges</h2>
+
+      <div class="questions-list">
+
+        <!-- Q1 -->
+        <div class="question-card" data-q="1">
+          <div class="q-header">
+            <div class="q-number">Q1</div>
+            <div class="q-module reporting">Reporting</div>
+          </div>
+          <h3>Menu Performance Report</h3>
+          <p>Create a Menu Performance Report showing Menu Item, Category, Total Quantity Ordered, Total Revenue, and Contribution % to Total Revenue.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">🎨</span> Conditional Styling: Items contributing &lt; 1% in <span class="red">Red</span> (consider removing)</div>
+            <div class="q-detail-item"><span class="detail-icon">🔽</span> Prompts for Outlet City and Category</div>
+            <div class="q-detail-item"><span class="detail-icon">📄</span> Header with SpicePot branding, Footer with page number</div>
+            <div class="q-detail-item"><span class="detail-icon">🔤</span> Font: Palatino Linotype, size 11</div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-card" data-q="2">
+          <div class="q-header">
+            <div class="q-number">Q2</div>
+            <div class="q-module reporting">Reporting</div>
+          </div>
+          <h3>Delivery Performance Report</h3>
+          <p>Build a Delivery Performance Report listing all delivery orders with Order Time, Preparation Time, Delivery Time, Total Time, and Customer Rating.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">🧮</span> Calculated field: Total Delivery Time = Preparation + Delivery</div>
+            <div class="q-detail-item"><span class="detail-icon">🎨</span> Styling: &gt;60 mins → <span class="red">Red</span>, 45–60 → <span class="amber">Amber</span>, &lt;45 → <span class="green">Green</span></div>
+            <div class="q-detail-item"><span class="detail-icon">📊</span> Summary: Average delivery time by Outlet City in footer</div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-card" data-q="3">
+          <div class="q-header">
+            <div class="q-number">Q3</div>
+            <div class="q-module reporting">Reporting</div>
+          </div>
+          <h3>Hourly Order Volume Trends</h3>
+          <p>Using Report Visualize Prompt, allow Outlet Managers to select chart type (Bar or Line) to view Hourly Order Volume Trends across different days of the week.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">🔽</span> Prompts for Outlet Name and Order Type</div>
+            <div class="q-detail-item"><span class="detail-icon">📝</span> Summarize peak hour, busiest day, most popular category as text objects</div>
+            <div class="q-detail-item"><span class="detail-icon">🎨</span> Conditional Styling: hours with Cancelled orders &gt;10 in <span class="amber">Amber</span></div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-card" data-q="4">
+          <div class="q-header">
+            <div class="q-number">Q4</div>
+            <div class="q-module exploration">Exploration</div>
+          </div>
+          <h3>Cognos Exploration – Pattern Discovery</h3>
+          <p>Use Cognos Exploration to discover patterns in the SpicePot dataset exploring relationship between Order Type and Customer Rating.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">🔍</span> Investigate which Feedback Tags appear most frequently for Delivery orders</div>
+            <div class="q-detail-item"><span class="detail-icon">📈</span> Correlate Feedback Tags with Delivery Time</div>
+            <div class="q-detail-item"><span class="detail-icon">🏆</span> Identify top 5 best-performing menu items across all outlets</div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-card" data-q="5">
+          <div class="q-header">
+            <div class="q-number">Q5</div>
+            <div class="q-module dashboard">Dashboard</div>
+          </div>
+          <h3>SpicePot Operations Dashboard</h3>
+          <p>Design a comprehensive SpicePot Operations Dashboard with multiple visualizations and KPI tiles.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">📊</span> KPI Tiles: Total Revenue, Avg Customer Rating, Order Cancellation Rate, Avg Delivery Time</div>
+            <div class="q-detail-item"><span class="detail-icon">📊</span> Bar chart: Revenue by Menu Category</div>
+            <div class="q-detail-item"><span class="detail-icon">📈</span> Line chart: Daily Revenue Trend</div>
+            <div class="q-detail-item"><span class="detail-icon">🥧</span> Pie chart: Order Type Distribution (Dine-In/Takeaway/Delivery)</div>
+            <div class="q-detail-item"><span class="detail-icon">📋</span> Waiter Performance table by Rating</div>
+            <div class="q-detail-item"><span class="detail-icon">🔽</span> Add Outlet and Date filters</div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-card" data-q="6">
+          <div class="q-header">
+            <div class="q-number">Q6</div>
+            <div class="q-module story">Story Making</div>
+          </div>
+          <h3>Monthly Operations Review Story</h3>
+          <p>Create a Cognos Story for SpicePot's Monthly Operations Review with 6 narrative scenes.</p>
+          <div class="q-details">
+            <div class="q-detail-item"><span class="detail-icon">1️⃣</span> Scene 1: Chain-wide Sales & Order Overview</div>
+            <div class="q-detail-item"><span class="detail-icon">2️⃣</span> Scene 2: Top & Bottom Performing Menu Items</div>
+            <div class="q-detail-item"><span class="detail-icon">3️⃣</span> Scene 3: Delivery Performance & Complaint Analysis</div>
+            <div class="q-detail-item"><span class="detail-icon">4️⃣</span> Scene 4: Customer Satisfaction by Outlet & Order Type</div>
+            <div class="q-detail-item"><span class="detail-icon">5️⃣</span> Scene 5: Peak Hour & Demand Pattern Analysis</div>
+            <div class="q-detail-item"><span class="detail-icon">6️⃣</span> Scene 6: Menu Optimization & Delivery Improvement Recommendations</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DASHBOARD PREVIEW -->
+  <section id="dashboard" class="section dashboard-section">
+    <div class="container">
+      <div class="section-label">Dashboard Preview</div>
+      <h2 class="section-title">SpicePot KPI Overview</h2>
+      <p class="section-desc">Interactive simulation of the IBM Cognos Dashboard (Q5)</p>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label>Outlet City</label>
+          <select id="outletFilter">
+            <option value="all">All Outlets</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Coimbatore">Coimbatore</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Order Type</label>
+          <select id="orderTypeFilter">
+            <option value="all">All Types</option>
+            <option value="dine">Dine-In</option>
+            <option value="takeaway">Takeaway</option>
+            <option value="delivery">Delivery</option>
+          </select>
+        </div>
+        <button class="apply-btn" id="applyFilter">Apply Filters</button>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon">💰</div>
+          <div class="kpi-value" id="kpiRevenue">₹48,72,500</div>
+          <div class="kpi-label">Total Revenue</div>
+          <div class="kpi-trend up">↑ 12.4% vs last month</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">⭐</div>
+          <div class="kpi-value" id="kpiRating">4.2</div>
+          <div class="kpi-label">Avg Customer Rating</div>
+          <div class="kpi-trend up">↑ 0.3 improvement</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">❌</div>
+          <div class="kpi-value" id="kpiCancel">8.6%</div>
+          <div class="kpi-label">Cancellation Rate</div>
+          <div class="kpi-trend down">↓ 2.1% decrease</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">🚚</div>
+          <div class="kpi-value" id="kpiDelivery">42 mins</div>
+          <div class="kpi-label">Avg Delivery Time</div>
+          <div class="kpi-trend down">↓ 5 min faster</div>
+        </div>
+      </div>
+
+      <div class="charts-row">
+        <div class="chart-box">
+          <h4>Revenue by Category</h4>
+          <div class="bar-chart" id="categoryChart">
+            <div class="bar-item">
+              <div class="bar-label">Mains</div>
+              <div class="bar-wrap"><div class="bar" style="width:82%" data-val="₹21.3L"></div></div>
+              <div class="bar-val">₹21.3L</div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Starters</div>
+              <div class="bar-wrap"><div class="bar" style="width:54%" data-val="₹14.0L"></div></div>
+              <div class="bar-val">₹14.0L</div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Beverages</div>
+              <div class="bar-wrap"><div class="bar" style="width:38%" data-val="₹9.8L"></div></div>
+              <div class="bar-val">₹9.8L</div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Desserts</div>
+              <div class="bar-wrap"><div class="bar" style="width:14%" data-val="₹3.6L"></div></div>
+              <div class="bar-val">₹3.6L</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <h4>Order Type Distribution</h4>
+          <div class="donut-wrap">
+            <svg viewBox="0 0 200 200" class="donut-svg" id="donutChart">
+              <circle class="donut-ring" cx="100" cy="100" r="70" fill="transparent" stroke="#1a1a2e" stroke-width="40"/>
+              <!-- Dine-In: 42% -->
+              <circle class="donut-seg seg-dine" cx="100" cy="100" r="70" fill="transparent"
+                stroke="#e8a820" stroke-width="40"
+                stroke-dasharray="184.7 254.3" stroke-dashoffset="0"/>
+              <!-- Takeaway: 28% -->
+              <circle class="donut-seg seg-take" cx="100" cy="100" r="70" fill="transparent"
+                stroke="#c84b31" stroke-width="40"
+                stroke-dasharray="123.2 315.8" stroke-dashoffset="-184.7"/>
+              <!-- Delivery: 30% -->
+              <circle class="donut-seg seg-del" cx="100" cy="100" r="70" fill="transparent"
+                stroke="#2e8b57" stroke-width="40"
+                stroke-dasharray="131.9 307.1" stroke-dashoffset="-307.9"/>
+              <text x="100" y="95" text-anchor="middle" class="donut-center-title">Orders</text>
+              <text x="100" y="115" text-anchor="middle" class="donut-center-sub">by Type</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="dot dine"></span>Dine-In (42%)</div>
+              <div class="legend-item"><span class="dot delivery"></span>Delivery (30%)</div>
+              <div class="legend-item"><span class="dot takeaway"></span>Takeaway (28%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waiter Performance Table -->
+      <div class="table-box">
+        <h4>Top Waiter Performance by Rating</h4>
+        <table class="perf-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Waiter Name</th>
+              <th>Outlet</th>
+              <th>Avg Rating</th>
+              <th>Orders Served</th>
+              <th>Performance</th>
+            </tr>
+          </thead>
+          <tbody id="waiterTable">
+            <tr><td>1</td><td>Ravi Kumar</td><td>Chennai Central</td><td>⭐ 4.9</td><td>312</td><td><span class="perf excellent">Excellent</span></td></tr>
+            <tr><td>2</td><td>Priya S.</td><td>Bangalore Koramangala</td><td>⭐ 4.8</td><td>287</td><td><span class="perf excellent">Excellent</span></td></tr>
+            <tr><td>3</td><td>Arun T.</td><td>Hyderabad Banjara Hills</td><td>⭐ 4.6</td><td>341</td><td><span class="perf good">Good</span></td></tr>
+            <tr><td>4</td><td>Divya M.</td><td>Coimbatore RS Puram</td><td>⭐ 4.5</td><td>299</td><td><span class="perf good">Good</span></td></tr>
+            <tr><td>5</td><td>Karthik R.</td><td>Chennai Adyar</td><td>⭐ 3.9</td><td>265</td><td><span class="perf average">Average</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- COGNOS MODULES INFO -->
+  <section id="team" class="section modules-section">
+    <div class="container">
+      <div class="section-label">Technology Stack</div>
+      <h2 class="section-title">IBM Cognos Analytics Modules</h2>
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-num">01</div>
+          <h3>Reporting</h3>
+          <p>Build pixel-perfect, enterprise-grade reports with conditional styling, calculated fields, and dynamic prompts for user-driven filtering.</p>
+          <div class="module-tags"><span>Q1</span><span>Q2</span><span>Q3</span></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">02</div>
+          <h3>Exploration</h3>
+          <p>AI-driven data discovery that automatically surfaces patterns, correlations, and anomalies in the SpicePot dataset without predefined queries.</p>
+          <div class="module-tags"><span>Q4</span></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">03</div>
+          <h3>Dashboard</h3>
+          <p>Interactive, self-service dashboards with KPI tiles, dynamic charts, cross-filtering, and real-time outlet/date filters for operations teams.</p>
+          <div class="module-tags"><span>Q5</span></div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">04</div>
+          <h3>Story Making</h3>
+          <p>Narrative-driven data storytelling that guides stakeholders through insights — from chain-wide overview to actionable recommendations.</p>
+          <div class="module-tags"><span>Q6</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY PERFORMANCE LEGEND -->
+  <section class="section legend-section">
+    <div class="container">
+      <div class="section-label">Q2 – Visual Reference</div>
+      <h2 class="section-title">Delivery Time Conditional Styling</h2>
+      <div class="legend-grid">
+        <div class="legend-card green-card">
+          <div class="legend-time">&lt; 45 mins</div>
+          <div class="legend-status">✅ On Time</div>
+          <div class="legend-action">Maintain service level</div>
+        </div>
+        <div class="legend-card amber-card">
+          <div class="legend-time">45 – 60 mins</div>
+          <div class="legend-status">⚠️ Delayed</div>
+          <div class="legend-action">Monitor & optimize routes</div>
+        </div>
+        <div class="legend-card red-card">
+          <div class="legend-time">&gt; 60 mins</div>
+          <div class="legend-status">🚨 Critical</div>
+          <div class="legend-action">Immediate action required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">SpicePot Analytics</div>
+        <p>IBM Cognos Analytics · Case Study 13<br/>Industry: Food & Restaurant Chain</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Modules</strong>
+          <ul><li>Reporting</li><li>Exploration</li><li>Dashboard</li><li>Story Making</li></ul>
+        </div>
+        <div>
+          <strong>Case Questions</strong>
+          <ul><li>Q1 – Q3: Reporting</li><li>Q4: Exploration</li><li>Q5: Dashboard</li><li>Q6: Story</li></ul>
+        </div>
+      </div>
+      <div class="footer-badges">
+        <div class="ibm-badge">IBM</div>
+        <div class="adr-badge">AdroIT Technologies</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>SpicePot Restaurant Chain · Sales & Customer Analytics · Page 27</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
